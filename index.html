@@ -2,23 +2,67 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <title>Travel Widget</title>
+  <title>Rese-widget med skalning och storlekskontroll</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      overflow: hidden;
-      height: 100vh;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background: #ffffff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .widget-container {
+      width: 600px;
+      overflow: visible;
+      margin-top: 20px;
+      padding-right: 20px;
+    }
+
+    /* Skala ner widgeten för att passa in */
+    .widget-container > * {
+      transform: scale(0.9);
+      transform-origin: left top;
+      width: 111%;
+      height: auto;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #FFB800;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #e6a700;
     }
   </style>
 </head>
 <body>
-  <script async src="https://tpemd.com/content?trs=441320&shmarker=655771&locale=en&curr=SEK&powered_by=true&border_radius=30&plain=true&color_button=%23FFB800&color_button_text=%23FFB800&color_border=%23000000ff&promo_id=4132&campaign_id=121" charset="utf-8"></script>
+
+  <button onclick="ändraStorlek()">Ändra storlek på widgeten</button>
+
+  <div class="widget-container" id="widget">
+    <script async src="https://tpemd.com/content?trs=441320&shmarker=655771&locale=en&curr=SEK&powered_by=true&border_radius=30&plain=true&color_button=%23FFB800&color_button_text=%23FFB800&color_border=%23000000ff&promo_id=4132&campaign_id=121" charset="utf-8"></script>
+  </div>
+
+  <script>
+    const widget = document.getElementById('widget');
+    let storlek = 0;
+    const storlekar = [600, 500, 400, 300];
+
+    function ändraStorlek() {
+      storlek = (storlek + 1) % storlekar.length;
+      widget.style.width = storlekar[storlek] + "px";
+    }
+  </script>
+
 </body>
 </html>
