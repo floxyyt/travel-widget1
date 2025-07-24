@@ -2,27 +2,19 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <title>Rese-widget i minsta storleken</title>
+  <title>Minimal widget</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background: #ffffff;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      background: transparent;
     }
 
     .widget-container {
-      width: 300px; /* Minsta storleken */
+      width: 300px;
       overflow: visible;
-      margin-top: 20px;
-      padding-right: 20px;
     }
 
-    /* Skala ner widgeten för att passa in */
     .widget-container > * {
       transform: scale(0.9);
       transform-origin: left top;
@@ -33,7 +25,7 @@
 </head>
 <body>
 
-  <div class="widget-container" id="widget">
+  <div class="widget-container">
     <script async src="https://tpemd.com/content?trs=441320&shmarker=655771&locale=en&curr=SEK&powered_by=true&border_radius=30&plain=true&color_button=%23FFB800&color_button_text=%23FFB800&color_border=%23000000ff&promo_id=4132&campaign_id=121" charset="utf-8"></script>
   </div>
 
