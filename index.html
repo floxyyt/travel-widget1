@@ -2,7 +2,7 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <title>Widget – stilren version</title>
+  <title>Widget – originalstorlek med stil</title>
   <style>
     html, body {
       margin: 0;
@@ -15,20 +15,20 @@
     }
 
     .widget-wrapper {
-      width: 320px;
+      width: 600px; /* Återställd till full storlek */
       padding: 10px;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       background-color: #f9f9f9;
     }
 
+    /* Ingen skalning längre */
     .widget-wrapper > * {
-      transform: scale(0.9);
-      transform-origin: top left;
-      width: 111%;
+      width: 100%;
+      height: auto;
     }
 
-    /* Göra "powered by"-texten mindre och ljusare */
+    /* Diskret stil på all text */
     .widget-wrapper ::-webkit-scrollbar {
       display: none;
     }
