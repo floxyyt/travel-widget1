@@ -2,30 +2,46 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <title>Minimal widget</title>
+  <title>Widget – stilren version</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    .widget-container {
-      width: 300px;
-      overflow: visible;
+    .widget-wrapper {
+      width: 320px;
+      padding: 10px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      background-color: #f9f9f9;
     }
 
-    .widget-container > * {
+    .widget-wrapper > * {
       transform: scale(0.9);
-      transform-origin: left top;
+      transform-origin: top left;
       width: 111%;
-      height: auto;
+    }
+
+    /* Göra "powered by"-texten mindre och ljusare */
+    .widget-wrapper ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .widget-wrapper * {
+      font-size: 12px !important;
+      color: #999 !important;
     }
   </style>
 </head>
 <body>
 
-  <div class="widget-container">
+  <div class="widget-wrapper">
     <script async src="https://tpemd.com/content?trs=441320&shmarker=655771&locale=en&curr=SEK&powered_by=true&border_radius=30&plain=true&color_button=%23FFB800&color_button_text=%23FFB800&color_border=%23000000ff&promo_id=4132&campaign_id=121" charset="utf-8"></script>
   </div>
 
