@@ -15,24 +15,20 @@
     }
 
     .widget-wrapper {
-      width: 600px; /* Återställd till full storlek */
+      width: fit-content;
       padding: 10px;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       background-color: #f9f9f9;
     }
 
-    /* Ingen skalning längre */
+    /* Ta bort skalning */
     .widget-wrapper > * {
       width: 100%;
       height: auto;
     }
 
-    /* Diskret stil på all text */
-    .widget-wrapper ::-webkit-scrollbar {
-      display: none;
-    }
-
+    /* Gör powered by mindre och ljusare */
     .widget-wrapper * {
       font-size: 12px !important;
       color: #999 !important;
